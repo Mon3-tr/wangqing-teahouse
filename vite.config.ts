@@ -32,13 +32,6 @@ export default defineConfig({
     },
   },
 
-  // Inline ALL assets as base64 into the JS bundle. Required because the
-  // inline-dist.mjs post-build step folds the JS into a single HTML file,
-  // which would otherwise break the relative path used for emitted assets.
-  build: {
-    assetsInlineLimit: 100 * 1024 * 1024,
-  },
-
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
   server: {
