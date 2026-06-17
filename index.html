@@ -1,0 +1,28 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Generate Website from Document</title>
+      <meta name="description" content="Generates complete websites automatically from provided documents, enabling users to quickly create professional web pages without coding skills." />
+      <meta name="robots" content="noindex, nofollow" />
+      <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      
+    </head>
+
+    <body>
+      
+      <div id="root"></div>
+      <script>
+        const path = window.location.pathname.replace(/\\/g, '/').toLowerCase();
+        if (window.location.protocol === 'file:' && !path.endsWith('/dist/index.html')) {
+          window.location.replace('./dist/index.html');
+        }
+      </script>
+      <script type="module" src="/src/main.tsx"></script>
+      
+    </body>
+  </html>
+  

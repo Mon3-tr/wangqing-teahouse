@@ -1,0 +1,1619 @@
+{
+  "meta": {
+    "title": "白蛇·法海篇",
+    "author": "忘情茶馆",
+    "version": "1.0.0",
+    "description": "你是金山寺的法海。子时三刻,你看见了不该看见的妖气。这一次,由你选择从何种法眼看下去。",
+    "theme": "paper",
+    "ambient": "wind",
+    "cover": {
+      "label": "白蛇·法海篇",
+      "tagline": "你看见的,是妖气,还是人间"
+    },
+    "variableName": "法眼",
+    "initialVariable": 50
+  },
+  "startNodeId": "start",
+  "variables": {
+    "view_xihu": "none",
+    "helped_kunlun": false,
+    "water_choice": "none",
+    "view_xushi": false,
+    "voice_jinbo": false,
+    "eggs_collected": 0
+  },
+  "achievements": {
+    "ach_first_qiyi": {
+      "title": "初感妖气",
+      "description": "子时三刻,你第一次将那股气息认作了妖气。"
+    },
+    "ach_jinbo_voice": {
+      "title": "钵中独语",
+      "description": "你听见了金钵的心声。它比你早一千年,看人间。"
+    },
+    "ach_xushi_view": {
+      "title": "断桥另眼",
+      "description": "你借许仙的眼,看了一眼自己。"
+    },
+    "ach_kunlun_help": {
+      "title": "不忍下钵",
+      "description": "昆仑山下,你的禅杖未曾出鞘。"
+    },
+    "ach_huanjing": {
+      "title": "白头偕老幻",
+      "description": "你看见了一幅未曾发生过的古画。"
+    },
+    "ach_baishe_view": {
+      "title": "蛇眼看湖",
+      "description": "你借白蛇的眼,看了一眼西湖,与你眼中的西湖,并不相同。"
+    },
+    "ach_eggs_half": {
+      "title": "卷上点点星",
+      "description": "你已点亮了过半的文化彩蛋。卷轴上每一处呼吸,都不曾错过。"
+    },
+    "ach_eggs_full": {
+      "title": "学究",
+      "description": "全章彩蛋尽收。你看见的不只是故事,还有故事背后的千年。"
+    },
+    "ach_ending_jianding": {
+      "title": "天理在我",
+      "description": "你完成了你必须完成的事。塔成,钵收,佛号一声。"
+    },
+    "ach_ending_huaiyi": {
+      "title": "人间疑情",
+      "description": "塔下灯火长明。你第一次问自己:是不是错了。"
+    },
+    "ach_ending_juexing": {
+      "title": "法眼破执",
+      "description": "你放下了金钵。但塔已成,人已去。"
+    },
+    "ach_ending_cibei": {
+      "title": "塔下二十年",
+      "description": "你坐在塔前等了二十年。每一日,都将那卷《雷峰塔》翻到最后一出。"
+    },
+    "ach_ending_jita": {
+      "title": "隐回·祭塔",
+      "description": "孝心动塔。二十年后,许仕林祭塔、青蛇劈基、白蛇出塔——有人在这一卷上,续了一笔。"
+    },
+    "ach_culture_jinbo": {
+      "title": "见钵识源",
+      "description": "原来这只金钵,曾盛过另一个故事的月光。"
+    },
+    "ach_culture_duanqiao": {
+      "title": "断桥伞下",
+      "description": "残雪半融,望之似断而连;一伞之借,一段之缘。"
+    },
+    "ach_culture_duanwu": {
+      "title": "五毒入酒",
+      "description": "雄黄入酒、菖蒲悬门,原是为了驱五毒,不是为了驱她。"
+    },
+    "ach_act_complete": {
+      "title": "初幕方成",
+      "description": "第一幕「金山初感」已尽。你已踏出禅房半步。"
+    },
+    "ach_act2_complete": {
+      "title": "二幕落帆",
+      "description": "第二幕「西湖初遇」已尽。你已隔伞,看过她一回。"
+    },
+    "ach_act3_complete": {
+      "title": "三幕现形",
+      "description": "第三幕「端午现形」已尽。你看见了她原本的样子,她也看见了你为难的样子。"
+    },
+    "ach_culture_lingzhi": {
+      "title": "仙草非草",
+      "description": "灵芝者,瑞草也。一段神话,半本本草——〈神农本草经〉列其为上品,曰「久服轻身,延年神仙」。"
+    },
+    "ach_act4_complete": {
+      "title": "四幕得草",
+      "description": "第四幕「盗仙草」已尽。她已得草。你已不能装作未见。"
+    },
+    "ach_culture_shuiman": {
+      "title": "水患成神",
+      "description": "金山寺旧址在长江中,唐宋间多次潮患。蛇与水,在民间本是同义。"
+    },
+    "ach_act5_complete": {
+      "title": "五幕水退",
+      "description": "第五幕「水漫金山」已尽。水退三日,她产一子。你已知下一出叫什么。"
+    },
+    "ach_xushi_view2": {
+      "title": "再借书生眼",
+      "description": "断桥之外,你又借了一次许仙的眼。第一次他看你像光,这一次,他看你像门。"
+    },
+    "ach_culture_jingshi": {
+      "title": "三种白娘子",
+      "description": "三百年三本写。冯梦龙写「邪」,方成培写「怨」,民间口耳写「义」。"
+    },
+    "ach_act6_complete": {
+      "title": "六幕断桥",
+      "description": "第六幕「断桥重逢」已尽。一家三口立于月下,你立于桥外。"
+    },
+    "ach_culture_archeology": {
+      "title": "塔下藏经",
+      "description": "一九二四年雷峰塔倒塌,地宫中未见镇蛇金钵——只见一卷〈一切如来心秘密全身舍利宝箧印陀罗尼经〉。故事是故事,史是史。"
+    }
+  },
+  "nodes": {
+    "start": {
+      "chapterTitle": "第一幕 · 金山初感",
+      "title": "子时",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "jinshan_chamber",
+        "name": "金山寺 · 禅房",
+        "type": "major",
+        "description": "禅房一灯将熄,江风过廊。",
+        "arrival": "你于蒲团上结跏趺坐,已是第三个时辰。"
+      },
+      "progress": 2,
+      "segments": [
+        { "speaker": "旁白", "text": "金山寺,子时。" },
+        { "text": "你是金山寺住持,法名法海。案前金钵,袖中禅杖。" },
+        { "text": "心头本应空明。可此刻,有一缕气息,自西方来。" }
+      ],
+      "choices": [
+        { "text": "凝神细察", "next": "act1_qiyi" }
+      ]
+    },
+    "act1_qiyi": {
+      "scene": "jinshan_chamber",
+      "progress": 5,
+      "segments": [
+        { "text": "那气息淡而不散,自西湖一路游到金山寺。" },
+        { "text": "你将神识溯流而上——西湖、断桥、一团白影,影下蛇形缠绕。" },
+        { "speaker": "法海", "text": "妖气。" }
+      ],
+      "choices": [
+        {
+          "text": "起身取钵",
+          "next": "act1_qiyi_confirmed",
+          "changes": {
+            "addFlag": "f_first_qiyi",
+            "unlockAchievement": "ach_first_qiyi"
+          }
+        }
+      ]
+    },
+    "act1_qiyi_confirmed": {
+      "scene": "jinshan_chamber",
+      "progress": 8,
+      "segments": [
+        { "text": "你伸手取过金钵,捧于掌心。" },
+        { "text": "钵身古旧,铭文模糊,内缘金光与那妖气遥遥呼应。" }
+      ],
+      "choices": [
+        { "text": "细看金钵 ✦", "next": "act1_egg_jinbo", "effect": "breath" },
+        { "text": "推门而出", "next": "act1_corridor" }
+      ]
+    },
+    "act1_egg_jinbo": {
+      "scene": "jinshan_chamber",
+      "progress": 8,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,继续向前。" }
+      ],
+      "choices": [
+        {
+          "text": "合钵,推门而出",
+          "next": "act1_corridor",
+          "changes": {
+            "set": { "eggs_collected": 1 },
+            "addFlag": "f_egg_jinbo",
+            "unlockAchievement": "ach_culture_jinbo"
+          }
+        }
+      ]
+    },
+    "act1_corridor": {
+      "scene": {
+        "id": "jinshan_corridor",
+        "name": "金山寺 · 长廊",
+        "type": "major",
+        "description": "长廊一面临江,一面挂着历代住持的遗偈。",
+        "arrival": "你立于廊下,面西。"
+      },
+      "progress": 12,
+      "segments": [
+        { "text": "西方天际无月,可你看得见。" },
+        { "text": "那白影在断桥畔徘徊未去,影下另有一线青气随之——一白一青,皆是蛇形。" },
+        { "text": "她不过倚着桥栏望湖,神情近乎人。若不是那一缕妖气,你会以为是哪家女子夜里散心。" }
+      ],
+      "choices": [
+        { "text": "听钵音", "next": "act1_choice1" }
+      ]
+    },
+    "act1_choice1": {
+      "scene": "jinshan_corridor",
+      "progress": 15,
+      "segments": [
+        { "text": "袖中金钵不急不缓,一声接一声,似乎在催。可你脚下未动。" },
+        { "speaker": "旁白", "text": "—— 抉择 · 你选择从哪一种法眼看下去? ——" }
+      ],
+      "choices": [
+        {
+          "text": "「即刻下山,见妖即除。」",
+          "next": "act1_path_strict",
+          "changes": {
+            "val": -8,
+            "importantFlag": { "flag": "act1_strict", "label": "见妖即除" }
+          }
+        },
+        {
+          "text": "「再观七日,看她做不做坏事。」",
+          "next": "act1_path_observe",
+          "changes": {
+            "val": 8,
+            "importantFlag": { "flag": "act1_observe", "label": "再观七日" }
+          }
+        }
+      ]
+    },
+    "act1_path_strict": {
+      "scene": "jinshan_chamber",
+      "progress": 18,
+      "segments": [
+        { "speaker": "法海", "text": "戒律所在,无可议。" },
+        { "text": "你转身回禅房,取僧帽、铜杖、戒刀。" },
+        { "text": "心中却起一丝迟疑——为何金钵此刻,反而不再震了。" }
+      ],
+      "choices": [
+        { "text": "出寺", "next": "act1_converge" }
+      ]
+    },
+    "act1_path_observe": {
+      "scene": "jinshan_corridor",
+      "progress": 18,
+      "segments": [
+        { "speaker": "法海", "text": "且看七日。" },
+        { "text": "袖中金钵停了震,似松了一口气,又似有微微不甘。" },
+        { "text": "五更前那白影缓缓退入西湖深处,未伤一人。你睁眼,廊下已有微光。" }
+      ],
+      "choices": [
+        { "text": "下山一行,看个分明", "next": "act1_converge" }
+      ]
+    },
+    "act1_converge": {
+      "scene": {
+        "id": "jinshan_gate_dawn",
+        "name": "金山寺 · 山门 · 晨",
+        "type": "major",
+        "description": "晨雾自江上升起,千级石阶半浸于白。",
+        "arrival": "你立于山门之外。"
+      },
+      "progress": 22,
+      "segments": [
+        { "text": "石阶千级,沉入晨雾。你提起僧袍下摆,踏下一阶,又一阶。" },
+        { "text": "钱塘方向有风迎面而来,带着西湖的水汽——以及那一缕,你已认得的气息。" }
+      ],
+      "choices": [
+        {
+          "text": "登舟",
+          "next": "act2_start",
+          "changes": {
+            "addFlag": "f_act1_done",
+            "unlockAchievement": "ach_act_complete"
+          }
+        }
+      ]
+    },
+    "act2_start": {
+      "chapterTitle": "第二幕 · 西湖初遇",
+      "title": "登舟",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "qiantang_boat",
+        "name": "钱塘 · 渡舟",
+        "type": "major",
+        "description": "晨雾未散,江面如灰青绫。",
+        "arrival": "你坐于舟头,蓑衣未湿,先沾了雾气。"
+      },
+      "progress": 25,
+      "segments": [
+        { "text": "舟子撑篙,水声细如断弦。" },
+        { "text": "你按下心头那一缕——此行不为降妖,只为看个究竟。" }
+      ],
+      "choices": [
+        { "text": "上岸", "next": "act2_arrive" }
+      ]
+    },
+    "act2_arrive": {
+      "scene": {
+        "id": "xihu_duanqiao",
+        "name": "西湖 · 断桥",
+        "type": "major",
+        "description": "细雨初歇,桥畔垂柳摇着新绿。",
+        "arrival": "你立于桥头,僧袍未湿,手中无伞。"
+      },
+      "progress": 29,
+      "segments": [
+        { "text": "雨方过,游人未散。湖面浮着几只画舫,远处有人吹笛。" },
+        { "text": "袖中金钵微微一震——她在,且离你不过数十步。" }
+      ],
+      "choices": [
+        { "text": "循气而望", "next": "act2_observe" }
+      ]
+    },
+    "act2_observe": {
+      "scene": "xihu_duanqiao",
+      "progress": 33,
+      "segments": [
+        { "text": "桥东:一名青衫书生,伞已破半,雨打湿了肩。" },
+        { "text": "桥西:一白衣女子立于柳下,身侧另有一青衣婢女。" },
+        { "text": "书生举伞而过,伞檐倾偏——白衣女子鬓边落了一滴雨。" }
+      ],
+      "choices": [
+        { "text": "再看一眼", "next": "act2_xushi_view" }
+      ]
+    },
+    "act2_xushi_view": {
+      "scene": "xihu_duanqiao",
+      "progress": 37,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 视角切换 · 借许仙之眼 ——" },
+        { "text": "你忽觉一线神光,自那书生眉心透出,落入你眼中。" },
+        { "text": "他眼里:白衣不是白衣,是初雪后第一道日光;那一缕你称之为「妖气」的,是檐下风铃的颤。" }
+      ],
+      "choices": [
+        {
+          "text": "细看一寸 ✦",
+          "next": "act2_egg_duanqiao",
+          "effect": "breath",
+          "changes": {
+            "set": { "view_xushi": true },
+            "addFlag": "f_xushi_view",
+            "unlockAchievement": "ach_xushi_view"
+          }
+        },
+        {
+          "text": "退回自己的眼",
+          "next": "act2_back_view",
+          "changes": {
+            "set": { "view_xushi": true },
+            "addFlag": "f_xushi_view",
+            "unlockAchievement": "ach_xushi_view"
+          }
+        }
+      ]
+    },
+    "act2_egg_duanqiao": {
+      "scene": "xihu_duanqiao",
+      "progress": 38,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,退回自己的眼。" }
+      ],
+      "choices": [
+        {
+          "text": "合眼,退回自己的眼",
+          "next": "act2_back_view",
+          "changes": {
+            "set": { "eggs_collected": 2 },
+            "addFlag": "f_egg_duanqiao",
+            "unlockAchievement": "ach_culture_duanqiao"
+          }
+        }
+      ]
+    },
+    "act2_back_view": {
+      "scene": "xihu_duanqiao",
+      "progress": 41,
+      "segments": [
+        { "text": "神光散去,你又是你。" },
+        { "text": "那一缕妖气仍在,可你已知道,它在书生眼里,不叫妖气。" }
+      ],
+      "choices": [
+        { "text": "近前一步", "next": "act2_choice2" }
+      ]
+    },
+    "act2_choice2": {
+      "scene": "xihu_duanqiao",
+      "progress": 44,
+      "segments": [
+        { "text": "白衣女子忽然转头,目光扫过桥头——她看见了你。" },
+        { "text": "她未失态,只对婢女低语一句,袖中似有水汽暗动。" },
+        { "speaker": "旁白", "text": "—— 抉择 · 现身,还是默然? ——" }
+      ],
+      "choices": [
+        {
+          "text": "「施主借一步说话。」",
+          "next": "act2_path_show",
+          "changes": {
+            "val": -6,
+            "importantFlag": { "flag": "act2_show", "label": "现身相试" }
+          }
+        },
+        {
+          "text": "垂目,转身离去",
+          "next": "act2_path_silent",
+          "changes": {
+            "val": 6,
+            "importantFlag": { "flag": "act2_silent", "label": "默然离去" }
+          }
+        }
+      ]
+    },
+    "act2_path_show": {
+      "scene": "xihu_duanqiao",
+      "progress": 47,
+      "segments": [
+        { "text": "你合掌一礼,缓步上前。她敛裾还礼,神色无异。" },
+        { "speaker": "白衣女子", "text": "大师法眼,小女子心知。可这西湖之大,容不下一个借伞之人么?" },
+        { "text": "金钵在袖中微震,你压住,未答。" }
+      ],
+      "choices": [
+        { "text": "且退一步", "next": "act2_converge" }
+      ]
+    },
+    "act2_path_silent": {
+      "scene": "xihu_duanqiao",
+      "progress": 47,
+      "segments": [
+        { "text": "你垂目,转身。身后传来婢女低低一笑,似松了一口气。" },
+        { "text": "金钵也松了。你忽然想起方才许仙眼中的那一寸日光。" }
+      ],
+      "choices": [
+        { "text": "回舟", "next": "act2_converge" }
+      ]
+    },
+    "act2_converge": {
+      "scene": {
+        "id": "qiantang_boat_dusk",
+        "name": "钱塘 · 暮舟",
+        "type": "major",
+        "description": "暮色压江,远山如墨。",
+        "arrival": "舟子调转船头,载你回金山。"
+      },
+      "progress": 50,
+      "segments": [
+        { "text": "水声依旧。你坐在舟尾,袖中金钵静下了。" },
+        { "text": "江风过耳,只一句不知谁说的:借伞之人,后来还了么?" }
+      ],
+      "choices": [
+        {
+          "text": "回寺",
+          "next": "act3_start",
+          "changes": {
+            "addFlag": "f_act2_done",
+            "unlockAchievement": "ach_act2_complete"
+          }
+        }
+      ]
+    },
+    "act3_start": {
+      "chapterTitle": "第三幕 · 端午现形",
+      "title": "午时",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "jinshan_chamber_noon",
+        "name": "金山寺 · 禅房 · 午时",
+        "type": "major",
+        "description": "半年已过。端午日,阳光如金锡,压在纸窗上。",
+        "arrival": "你坐于茶几前,手中一枝青青菖叶。"
+      },
+      "progress": 53,
+      "segments": [
+        { "text": "半年间,她与许仙成了夫妇。你未再下山。" },
+        { "text": "今日端午,袖中金钵又动。这一次,动得不同。" }
+      ],
+      "choices": [
+        { "text": "举眼西望", "next": "act3_remote_view" }
+      ]
+    },
+    "act3_remote_view": {
+      "scene": {
+        "id": "xushi_courtyard",
+        "name": "杭州 · 许家小院",
+        "type": "major",
+        "description": "院中菖蒲悬在门上,桌上一壶雄黄酒,两只陶杯。",
+        "arrival": "你以法眼透墙而见。"
+      },
+      "progress": 56,
+      "segments": [
+        { "text": "许仙有些醉意,举杯要敬。" },
+        { "text": "她推杯,摇头,笑说不胜酒力。许仙不依,将杯送到她唇边。" },
+        { "text": "你袖中金钵一震——妖气与雄黄互犯,今日不可放她。" }
+      ],
+      "choices": [
+        { "text": "看下去", "next": "act3_xionghuang" }
+      ]
+    },
+    "act3_xionghuang": {
+      "scene": "xushi_courtyard",
+      "progress": 60,
+      "segments": [
+        { "text": "雄黄入腹。她面色微变,起身退入帐中,说是醉了要休息。" },
+        { "text": "许仙笑送她,自己又饮了一杯,偏不躲。半晌后,不醒。" },
+        { "text": "帐中一阵冷寂。你似听见一声极轻的喘息。" }
+      ],
+      "choices": [
+        { "text": "凑近一点看", "next": "act3_xianxing" }
+      ]
+    },
+    "act3_xianxing": {
+      "scene": "xushi_courtyard",
+      "progress": 64,
+      "segments": [
+        { "text": "你透帐而观:床上一道白光蜿蜿蜒蜒,不是人形。" },
+        { "text": "许仙醉中闻响,揭帐而起。一眼之后,一口鲜血,跌下不醒。" },
+        { "speaker": "旁白", "text": "她听见了。听见了他倒下的声音。" }
+      ],
+      "choices": [
+        { "text": "金钵震动不已——", "next": "act3_jinbo_view" }
+      ]
+    },
+    "act3_jinbo_view": {
+      "scene": "jinshan_chamber_noon",
+      "progress": 68,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 物品视角 · 金钵独语 ——" },
+        { "text": "金钵脱你掌而起,悬于案上三寸。你首次听见它说话。" }
+      ],
+      "choices": [
+        {
+          "text": "听",
+          "next": "act3_jinbo_voice",
+          "effect": "breath",
+          "changes": {
+            "set": { "voice_jinbo": true },
+            "addFlag": "f_jinbo_voice",
+            "unlockAchievement": "ach_jinbo_voice"
+          }
+        }
+      ]
+    },
+    "act3_jinbo_voice": {
+      "scene": "jinshan_chamber_noon",
+      "progress": 71,
+      "segments": [
+        { "speaker": "金钵", "text": "法海。我被铸于唐,含于明。五百年间,被你们叫作「定」。" },
+        { "speaker": "金钵", "text": "可方才那一震,不是因为她妖气重——是因为我听见了她的怕。" },
+        { "speaker": "金钵", "text": "她怕的不是你,是床上那个人醒不过来。" },
+        { "speaker": "金钵", "text": "你要收的,是她,还是她这一声怕?" }
+      ],
+      "choices": [
+        { "text": "看案上菖叶 ✦", "next": "act3_egg_duanwu", "effect": "breath" },
+        { "text": "不言。合掌。", "next": "act3_back" }
+      ]
+    },
+    "act3_egg_duanwu": {
+      "scene": "jinshan_chamber_noon",
+      "progress": 73,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,退下法眼。" }
+      ],
+      "choices": [
+        {
+          "text": "合掌,退下法眼",
+          "next": "act3_back",
+          "changes": {
+            "set": { "eggs_collected": 3 },
+            "addFlag": "f_egg_duanwu",
+            "unlockAchievement": "ach_culture_duanwu"
+          }
+        }
+      ]
+    },
+    "act3_back": {
+      "scene": "jinshan_chamber_noon",
+      "progress": 76,
+      "segments": [
+        { "text": "金钵落回掌心。案上菖叶已萎。" },
+        { "text": "你退下法眼。身体中有一丝事,在你这五十年路上,从未起过。" }
+      ],
+      "choices": [
+        { "text": "静坐至夜", "next": "act3_converge" }
+      ]
+    },
+    "act3_converge": {
+      "scene": {
+        "id": "jinshan_chamber_dusk",
+        "name": "金山寺 · 禅房 · 黄昏",
+        "type": "major",
+        "description": "灯未点。纸窗上一抹余晖。",
+        "arrival": "你未起身。"
+      },
+      "progress": 79,
+      "segments": [
+        { "text": "下午里你法眼中又有一事传来:她有身孕,三个月。为救许仙,她需仙草。" },
+        { "text": "金钵不再说话。你也不。只是伸手,取过禅杖。" }
+      ],
+      "choices": [
+        {
+          "text": "起身、下山",
+          "next": "act4_start",
+          "changes": {
+            "addFlag": "f_act3_done",
+            "unlockAchievement": "ach_act3_complete"
+          }
+        }
+      ]
+    },
+    "act4_start": {
+      "chapterTitle": "第四幕 · 盗仙草",
+      "title": "下山",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "qiantang_road",
+        "name": "钱塘古道",
+        "type": "major",
+        "description": "山道初春,残雪未消,松枝沥水。",
+        "arrival": "你披蓑而行,僧袍下摆已湿。"
+      },
+      "progress": 82,
+      "segments": [
+        { "text": "禅杖在你掌中,金钵在你袖里。两件器物,各有各的沉。" },
+        { "text": "西望江面,有一团青气向北而去——她已动身。" }
+      ],
+      "choices": [
+        { "text": "以法眼随之", "next": "act4_kunlun" }
+      ]
+    },
+    "act4_kunlun": {
+      "scene": {
+        "id": "kunlun_peak",
+        "name": "昆仑 · 雪峰",
+        "type": "major",
+        "description": "千丈雪坡,松柏不生。山顶云气缭绕,似有仙阙。",
+        "arrival": "你以法眼登顶。"
+      },
+      "progress": 86,
+      "segments": [
+        { "text": "山中果然有她。一袭白衣,持剑而上,身影落在雪地里,像一笔淡墨。" },
+        { "text": "山顶深处藏有灵芝,守山者乃南极仙翁座下鹤童、鹿童。她不会武,却已上到半山。" }
+      ],
+      "choices": [
+        { "text": "借她之眼,看她要做什么", "next": "act4_baishe_view" }
+      ]
+    },
+    "act4_baishe_view": {
+      "scene": "kunlun_peak",
+      "progress": 89,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 视角切换 · 借白蛇之眼 ——" },
+        { "text": "雪中你看见的不是雪——是许仙的脸。他面色青灰,呼吸如丝。" },
+        { "text": "你将剑握紧。山中风很大,却不及你心头那一阵冷。" }
+      ],
+      "choices": [
+        {
+          "text": "再上一步 ✦",
+          "next": "act4_baishe_battle",
+          "effect": "breath",
+          "changes": {
+            "addFlag": "f_baishe_view",
+            "unlockAchievement": "ach_baishe_view"
+          }
+        }
+      ]
+    },
+    "act4_baishe_battle": {
+      "scene": "kunlun_peak",
+      "progress": 92,
+      "segments": [
+        { "text": "鹤童执拂尘自云中而下,白须如雪。" },
+        { "speaker": "鹤童", "text": "灵芝乃天物。汝乃下界一蛇,擅越南极界,该当何罪?" },
+        { "text": "她不答,只是举剑。三十回合,她剑被拂尘卷走,跪地不起。" }
+      ],
+      "choices": [
+        { "text": "（拂尘举至高处——）", "next": "act4_choice3" }
+      ]
+    },
+    "act4_choice3": {
+      "scene": "kunlun_peak",
+      "progress": 95,
+      "segments": [
+        { "text": "一击之下,她必非死即伤。你立于云外,袖中禅杖未取。" },
+        { "speaker": "旁白", "text": "—— 抉择 · 法海是否出手? ——" }
+      ],
+      "choices": [
+        {
+          "text": "袖中一拂,挡那一击",
+          "next": "act4_path_help",
+          "changes": {
+            "val": -10,
+            "set": { "helped_kunlun": true },
+            "importantFlag": { "flag": "act4_help", "label": "暗助盗草" },
+            "unlockAchievement": "ach_kunlun_help"
+          }
+        },
+        {
+          "text": "袖手而立,任她担其因果",
+          "next": "act4_path_silent",
+          "changes": {
+            "val": 10,
+            "importantFlag": { "flag": "act4_silent", "label": "袖手不助" }
+          }
+        }
+      ]
+    },
+    "act4_path_help": {
+      "scene": "kunlun_peak",
+      "progress": 98,
+      "segments": [
+        { "text": "你袖中禅杖凌空一拂——拂尘半路偏开三寸。" },
+        { "text": "鹤童一惊,抬眼望天:云中无人。" },
+        { "text": "她趁机扑前,从云气里夺得灵芝,纵身跃下山去。" }
+      ],
+      "choices": [
+        { "text": "看 ✦ 灵芝何物", "next": "act4_egg_lingzhi", "effect": "breath" },
+        { "text": "收法眼,赶路", "next": "act4_aftermath" }
+      ]
+    },
+    "act4_path_silent": {
+      "scene": "kunlun_peak",
+      "progress": 98,
+      "segments": [
+        { "text": "你不动。袖中禅杖仍是禅杖。" },
+        { "text": "拂尘正要落下,云中忽传一声:「住手」。" },
+        { "text": "南极仙翁现身,叹一句:「她为救夫,情有可原。」赐草一株,放她下山。" }
+      ],
+      "choices": [
+        { "text": "看 ✦ 灵芝何物", "next": "act4_egg_lingzhi", "effect": "breath" },
+        { "text": "收法眼,赶路", "next": "act4_aftermath" }
+      ]
+    },
+    "act4_egg_lingzhi": {
+      "scene": "kunlun_peak",
+      "progress": 100,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,继续赶路。" }
+      ],
+      "choices": [
+        {
+          "text": "合眼,赶路",
+          "next": "act4_aftermath",
+          "changes": {
+            "set": { "eggs_collected": 4 },
+            "addFlag": "f_egg_lingzhi",
+            "unlockAchievement": "ach_culture_lingzhi"
+          }
+        }
+      ]
+    },
+    "act4_aftermath": {
+      "scene": {
+        "id": "qiantang_road_dusk",
+        "name": "钱塘古道 · 暮",
+        "type": "major",
+        "description": "暮色从山后压下来,松涛低沉。",
+        "arrival": "你立于道侧。"
+      },
+      "progress": 102,
+      "segments": [
+        { "text": "半个时辰后,一道青气自北而南,自你头顶掠过。" },
+        { "text": "她不知你在此处。她也不需要知道。" },
+        { "text": "袖中金钵忽然一沉——比此前任何一次都沉。" }
+      ],
+      "choices": [
+        { "text": "继续向杭州", "next": "act4_converge" }
+      ]
+    },
+    "act4_converge": {
+      "scene": {
+        "id": "qiantang_jiangpan",
+        "name": "钱塘 · 江畔",
+        "type": "major",
+        "description": "江涛浩荡,远处金山寺隐于雾中。",
+        "arrival": "你立于江畔,望见金山。"
+      },
+      "progress": 105,
+      "segments": [
+        { "text": "她救了他。可她终究是蛇。" },
+        { "text": "你未回金山。你过江入杭,直行至许家。许仙服草后方醒,见你便叩首请教。" },
+        { "text": "你告之实情:「她非人也。」许仙半疑半信,被你劝至金山寺。" },
+        { "text": "你将他留在禅房,名为避祸七日,闭门不放。你心中翻过〈雷峰塔传奇〉——下一出叫「水斗」。" }
+      ],
+      "choices": [
+        {
+          "text": "闭门诵经,等她寻来",
+          "next": "act5_start",
+          "changes": {
+            "addFlag": "f_act4_done",
+            "unlockAchievement": "ach_act4_complete"
+          }
+        }
+      ]
+    },
+    "act5_start": {
+      "chapterTitle": "第五幕 · 水漫金山",
+      "title": "第七日",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "jinshan_chamber_locked",
+        "name": "金山寺 · 禅房 · 第七日",
+        "type": "major",
+        "description": "门外两名守僧。许仙闭于内,十日未出。",
+        "arrival": "你立于门外。"
+      },
+      "progress": 108,
+      "segments": [
+        { "text": "七日已过。许仙请过几次,要下山去看妻与未生之子。你未允。" },
+        { "text": "袖中金钵未止其震,反而越来越烈。" },
+        { "text": "守僧来报:江上风起,潮线异常。她寻夫不见,必上金山。" }
+      ],
+      "choices": [
+        { "text": "出山门", "next": "act5_baishe_arrive" }
+      ]
+    },
+    "act5_baishe_arrive": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 112,
+      "segments": [
+        { "text": "江面上,白衣女子立于浪头,身后水族如云。" },
+        { "text": "她未着妖形。她只着一身素白,如同雪后初晴。" }
+      ],
+      "choices": [
+        { "text": "迎上一步", "next": "act5_dialog" }
+      ]
+    },
+    "act5_dialog": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 116,
+      "segments": [
+        { "speaker": "白衣女子", "text": "大师。还我夫君。" },
+        { "speaker": "法海", "text": "他在我寺中诵经避祸。你与他不是同道——还他凡身,各归各路。" },
+        { "speaker": "白衣女子", "text": "他是我夫。我子未见过他。你凭什么闭门不放?" }
+      ],
+      "choices": [
+        { "text": "她举手——", "next": "act5_zhang_shui" }
+      ]
+    },
+    "act5_zhang_shui": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 120,
+      "segments": [
+        { "text": "江水自她身后涌起,初时及膝,继而及胸,继而漫上山门石阶。" },
+        { "text": "你立于阶上,袖中金钵比此前任何一次都烈。" }
+      ],
+      "choices": [
+        { "text": "伸手入袖——", "next": "act5_choice4" }
+      ]
+    },
+    "act5_choice4": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 122,
+      "segments": [
+        { "text": "金钵在你袖中,水在你脚下,她在你眼中。" },
+        { "speaker": "旁白", "text": "—— 抉择 · 收钵,还是放钵? ——" }
+      ],
+      "choices": [
+        {
+          "text": "举钵收她,守天条",
+          "next": "act5_path_jianshou",
+          "changes": {
+            "val": -15,
+            "set": { "water_choice": "jianshou" },
+            "importantFlag": { "flag": "act5_jianshou", "label": "守天条" }
+          }
+        },
+        {
+          "text": "放钵入江,任她带许仙去",
+          "next": "act5_path_release_huanjing",
+          "changes": {
+            "val": 15,
+            "set": { "water_choice": "release" },
+            "importantFlag": { "flag": "act5_release", "label": "放钵入江" }
+          }
+        }
+      ]
+    },
+    "act5_path_jianshou": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 125,
+      "segments": [
+        { "text": "你举钵。金钵自掌中升起,化作金光一片,直罩潮头。" },
+        { "text": "她未退。她举手,水族群涌——" }
+      ],
+      "choices": [
+        { "text": "诵《楞严咒》", "next": "act5_water_battle" }
+      ]
+    },
+    "act5_path_release_huanjing": {
+      "scene": "jinshan_gate_dusk",
+      "progress": 125,
+      "segments": [
+        { "text": "你松手。金钵自袖中坠入江水,溅起一圈金光,沉了下去。" },
+        { "text": "水退。山门石阶上,雪一样的潮水退回江中。" },
+        { "text": "你看见自己未曾看见过的画——" }
+      ],
+      "choices": [
+        { "text": "看", "next": "act5_huanjing_view", "effect": "breath" }
+      ]
+    },
+    "act5_huanjing_view": {
+      "scene": {
+        "id": "huanjing_scroll",
+        "name": "幻象 · 一卷古画",
+        "type": "major",
+        "description": "画风如〈踏歌图〉。墨色尚未干。",
+        "arrival": "你只看了三息。"
+      },
+      "progress": 128,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 幻象 · 一幅未曾画下的古画 ——" },
+        { "text": "断桥之上,一对夫妇白头携手,身侧一子。柳色青青,湖光如镜。" },
+        { "text": "画的边缘已开始洇散——墨迹被水浸开,人形化作青烟。" },
+        { "speaker": "旁白", "text": "然而,原典中,记载的是另一个结局。" }
+      ],
+      "choices": [
+        {
+          "text": "看画消散",
+          "next": "act5_water_battle",
+          "changes": {
+            "addFlag": "f_huanjing",
+            "unlockAchievement": "ach_huanjing"
+          }
+        }
+      ]
+    },
+    "act5_water_battle": {
+      "scene": {
+        "id": "jinshan_gate_water",
+        "name": "金山寺 · 水中山门",
+        "type": "major",
+        "description": "潮水浸阶,梵唱与浪声相争。",
+        "arrival": "你诵咒。她引水。"
+      },
+      "progress": 132,
+      "segments": [
+        { "text": "你诵《楞严咒》。她引钱塘水。山门浸于潮中,僧众皆退。" },
+        { "text": "三个时辰。水退一寸,又涨一寸。她已显疲色。" },
+        { "text": "江中一只小蟹自她身后游过——你忽然想起:她身怀六甲。" }
+      ],
+      "choices": [
+        { "text": "看 ✦ 水漫金山", "next": "act5_egg_shuiman", "effect": "breath" },
+        { "text": "止水", "next": "act5_converge" }
+      ]
+    },
+    "act5_egg_shuiman": {
+      "scene": "jinshan_gate_water",
+      "progress": 134,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,止住眼前之水。" }
+      ],
+      "choices": [
+        {
+          "text": "止水",
+          "next": "act5_converge",
+          "changes": {
+            "set": { "eggs_collected": 5 },
+            "addFlag": "f_egg_shuiman",
+            "unlockAchievement": "ach_culture_shuiman"
+          }
+        }
+      ]
+    },
+    "act5_converge": {
+      "scene": {
+        "id": "jinshan_gate_after",
+        "name": "金山寺 · 山门 · 战后",
+        "type": "major",
+        "description": "潮退三日。江心一叶舟。",
+        "arrival": "你立于山门,袖中金钵已凉。"
+      },
+      "progress": 136,
+      "segments": [
+        { "text": "水退。她伏于江心一叶舟上,血色不退,被青衣婢女护着退入烟波。" },
+        { "text": "你立于山门。三日后,她产一子。" },
+        { "text": "十月之内,你将取她。" }
+      ],
+      "choices": [
+        {
+          "text": "下山",
+          "next": "act6_start",
+          "changes": {
+            "addFlag": "f_act5_done",
+            "unlockAchievement": "ach_act5_complete"
+          }
+        }
+      ]
+    },
+    "act6_start": {
+      "chapterTitle": "第六幕 · 断桥重逢",
+      "title": "满月",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "jinshan_three_months_after",
+        "name": "金山寺 · 山门 · 三月后",
+        "type": "major",
+        "description": "水退三月。江上无事。寺中亦无事。",
+        "arrival": "你立于山门前。"
+      },
+      "progress": 138,
+      "segments": [
+        { "text": "水退三月。江上无事。" },
+        { "text": "你听闻消息:她伏在西湖一座小宅养胎,今日满月。" },
+        { "text": "你下山。袖中金钵未带——你想看一眼,只一眼。" }
+      ],
+      "choices": [
+        { "text": "下山入杭", "next": "act6_yuewang" }
+      ]
+    },
+    "act6_yuewang": {
+      "scene": {
+        "id": "hangzhou_xiaoshan",
+        "name": "杭州近郊 · 小山",
+        "type": "major",
+        "description": "黄昏。山下村落,一户挂红绫一幅。",
+        "arrival": "你立于小山之上,远望许家。"
+      },
+      "progress": 142,
+      "segments": [
+        { "text": "你立于杭州近郊小山。山下许家方向,挂着红绫一幅——满月之礼。" },
+        { "text": "你未近前。三月之前,他还跪在你寺中诵经。今夜,他怀里抱着她的孩子。" },
+        { "text": "你忽然想起:那守僧来报你「他翻后窗走了」时,你只说了一个字——「随他」。" }
+      ],
+      "choices": [
+        { "text": "想看看许仙这三月是怎么过的", "next": "act6_xushi_intro" }
+      ]
+    },
+    "act6_xushi_intro": {
+      "scene": {
+        "id": "view_switch_xushi2",
+        "name": "视角切换 · 再借许仙之眼",
+        "type": "major",
+        "description": "时间回拨三月。金山寺禅房。",
+        "arrival": "你换了一种眼光。"
+      },
+      "progress": 145,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 视角切换 · 再借许仙之眼 ——" },
+        { "text": "你忽觉一线神光,自禅房中那个跪了七日的书生眉心透出,落入你眼中。" },
+        { "text": "第二幕断桥那一回,他眼里你是檐下落下的一道光。" },
+        { "text": "这一回,他眼里这间禅房不是「避祸」——是一座关人的笼,而你是看笼的人。" }
+      ],
+      "choices": [
+        { "text": "细看一寸 ✦", "next": "act6_xushi_doubt", "effect": "breath" }
+      ]
+    },
+    "act6_xushi_doubt": {
+      "scene": {
+        "id": "jinshan_chamber_xushi",
+        "name": "金山寺 · 禅房 · 雨夜",
+        "type": "major",
+        "description": "雨打窗棂。许仙跪于蒲团之外,门外两名守僧。",
+        "arrival": "他 —— 你 —— 已跪了七日。"
+      },
+      "progress": 148,
+      "segments": [
+        { "speaker": "许仙", "text": "大师说她是妖。可七日之中,她未来杀我,只来要我。" },
+        { "speaker": "许仙", "text": "她在江上喊「他是我夫」时,我听见了。我子未生,父不在侧——这不是妖事,是人事。" },
+        { "speaker": "许仙", "text": "大师为我好。可她,也为我好。" }
+      ],
+      "choices": [
+        { "text": "趁夜出寺", "next": "act6_xushi_run" }
+      ]
+    },
+    "act6_xushi_run": {
+      "scene": {
+        "id": "jinshan_escape_night",
+        "name": "金山 · 后崖 · 雨夜",
+        "type": "major",
+        "description": "三更。守僧打盹。后窗一线松。",
+        "arrival": "他翻窗而出。"
+      },
+      "progress": 152,
+      "segments": [
+        { "text": "三更。守僧已睡。后窗一线未关——他后来才知,那是法海留给他的。" },
+        { "text": "他翻窗,沿后崖小径下山,雇一叶舟过江。" },
+        { "text": "雨打衣襟。他未回头看金山一眼。" }
+      ],
+      "choices": [
+        { "text": "回杭州", "next": "act6_xushi_meet" }
+      ]
+    },
+    "act6_xushi_meet": {
+      "scene": {
+        "id": "xushi_house_inner",
+        "name": "杭州 · 许家 · 内室 · 满月之夜",
+        "type": "major",
+        "description": "灯火半昏。床上一人病色未退,怀中一婴酣睡。",
+        "arrival": "他推门入内。"
+      },
+      "progress": 156,
+      "segments": [
+        { "text": "他推门入内。床上白衣女子病色未退,怀中一婴酣睡,青衣婢女立于床尾。" },
+        { "speaker": "白蛇", "text": "夫君。这是我们的儿。" },
+        { "speaker": "许仙", "text": "我错信了人。你受的伤,我以后,一寸一寸还。" },
+        { "text": "她笑了一下,没说话。她已力竭,只把孩子轻轻放进他怀里。" }
+      ],
+      "choices": [
+        {
+          "text": "退回自己的眼",
+          "next": "act6_back_view",
+          "changes": {
+            "set": { "view_xushi2": true },
+            "addFlag": "f_xushi_view2",
+            "unlockAchievement": "ach_xushi_view2"
+          }
+        }
+      ]
+    },
+    "act6_back_view": {
+      "scene": {
+        "id": "xihu_yueye",
+        "name": "西湖 · 月夜",
+        "type": "major",
+        "description": "月已上柳梢。你回到自己的眼。",
+        "arrival": "你立于湖畔。"
+      },
+      "progress": 160,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 切回法海视角 ——" },
+        { "text": "你立于湖畔。许家窗内灯火,有人抱子立窗前。" },
+        { "text": "你忽然想起:那个雨天,书生借伞的桥头——就在不远处。" }
+      ],
+      "choices": [
+        { "text": "向断桥走", "next": "act6_duanqiao" }
+      ]
+    },
+    "act6_duanqiao": {
+      "scene": {
+        "id": "duanqiao_full_moon",
+        "name": "断桥 · 满月",
+        "type": "major",
+        "description": "月色满桥。柳影如纱。三人立于桥心。",
+        "arrival": "你立于桥外柳下。"
+      },
+      "progress": 164,
+      "segments": [
+        { "text": "满月之夜。许仙抱子立于断桥之上,白衣女子撑伞自桥那头来。" },
+        { "text": "她病色未退,步履极慢。三人立于桥心,未曾说话。" },
+        { "text": "桥下湖水,与第二幕那一日的雨,一般无二。" }
+      ],
+      "choices": [
+        { "text": "看 ✦ 警世通言 vs 雷峰塔", "next": "act6_egg_jingshi", "effect": "breath" },
+        { "text": "上前", "next": "act6_converge" }
+      ]
+    },
+    "act6_egg_jingshi": {
+      "scene": "duanqiao_full_moon",
+      "progress": 166,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,走向桥上人。" }
+      ],
+      "choices": [
+        {
+          "text": "上前",
+          "next": "act6_converge",
+          "changes": {
+            "set": { "eggs_collected": 6 },
+            "addFlag": "f_egg_jingshi",
+            "unlockAchievement": "ach_culture_jingshi"
+          }
+        }
+      ]
+    },
+    "act6_converge": {
+      "scene": {
+        "id": "duanqiao_full_moon_after",
+        "name": "断桥 · 桥外",
+        "type": "major",
+        "description": "三人立于桥心,你立于桥外。袖中金钵复震。",
+        "arrival": "她已抬眼看你。"
+      },
+      "progress": 170,
+      "segments": [
+        { "text": "你向断桥走去。她已抬眼看你。" },
+        { "text": "她未走,未逃。她将孩子交回许仙怀中,撑伞迎你三步。" },
+        { "speaker": "白蛇", "text": "大师。我知你为何来。" },
+        { "text": "袖中金钵复震。这一震,不为收她——是因为它已知,这一回,你必收她。" }
+      ],
+      "choices": [
+        {
+          "text": "进入第七幕「雷峰永镇」",
+          "next": "act7_start",
+          "changes": {
+            "addFlag": "f_act6_done",
+            "unlockAchievement": "ach_act6_complete"
+          }
+        }
+      ]
+    },
+    "act7_start": {
+      "chapterTitle": "第七幕 · 雷峰永镇",
+      "title": "举钵",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "duanqiao_full_moon_facing",
+        "name": "断桥 · 桥心 · 满月",
+        "type": "major",
+        "description": "三人立于桥心,你立于桥外。月华如水。",
+        "arrival": "你举起金钵。"
+      },
+      "progress": 178,
+      "segments": [
+        { "text": "你举起金钵。钵口朝她,光芒不烈,只静静一线。" },
+        { "text": "许仙抱子退后半步——他抱得很紧,孩子在睡。" },
+        { "text": "她未动。她已知,这一回不可躲。" }
+      ],
+      "choices": [
+        { "text": "听她最后一句", "next": "act7_baishe_words" }
+      ]
+    },
+    "act7_baishe_words": {
+      "scene": "duanqiao_full_moon_facing",
+      "progress": 181,
+      "segments": [
+        { "speaker": "白蛇", "text": "大师。我不求你放我。" },
+        { "speaker": "白蛇", "text": "我只求你,日后他若问起,你莫说我是妖。" },
+        { "speaker": "白蛇", "text": "说我是他的妻,我们的儿,有一个母亲。" }
+      ],
+      "choices": [
+        { "text": "——", "next": "act7_xushi_break" }
+      ]
+    },
+    "act7_xushi_break": {
+      "scene": "duanqiao_full_moon_facing",
+      "progress": 184,
+      "segments": [
+        { "text": "许仙冲上前一步,被你抬手一格,挡于身后。" },
+        { "speaker": "许仙", "text": "大师!她已伤成这样,你还要——" },
+        { "speaker": "法海", "text": "她伤的是这一世。我收的是她千年。" },
+        { "text": "孩子被惊醒,啼哭一声。" }
+      ],
+      "choices": [
+        { "text": "她回头看孩子最后一眼", "next": "act7_baishe_lastlook" }
+      ]
+    },
+    "act7_baishe_lastlook": {
+      "scene": "duanqiao_full_moon_facing",
+      "progress": 187,
+      "segments": [
+        { "text": "她忽然偏过头,看了孩子一眼。只一眼。" },
+        { "text": "她未哭,未求,未呼名。她只是看了一眼,便转回脸来,望着钵口。" },
+        { "text": "袖中金钵,这一刻,微微一颤——你听见它叹了一声,极轻,极轻。" }
+      ],
+      "choices": [
+        { "text": "落钵", "next": "act7_jinbo_collect" }
+      ]
+    },
+    "act7_jinbo_collect": {
+      "scene": {
+        "id": "duanqiao_jinbo_light",
+        "name": "断桥 · 钵光",
+        "type": "major",
+        "description": "金钵之光罩下。白衣化作白光,一线入钵。",
+        "arrival": "钵中,一缕白光蜷缩成寸。"
+      },
+      "progress": 192,
+      "segments": [
+        { "text": "钵光罩下。白衣化作一线白光,缓缓收入钵中。" },
+        { "text": "无声。无风。月色未变。" },
+        { "text": "许仙跪倒桥心,孩子在他怀里,哭得很轻。" }
+      ],
+      "choices": [
+        { "text": "携钵下山", "next": "act7_carry" }
+      ]
+    },
+    "act7_carry": {
+      "scene": {
+        "id": "hangzhou_road_dawn",
+        "name": "杭州 · 道上 · 黎明",
+        "type": "major",
+        "description": "天将白。湖面起雾。你携钵自断桥行至雷峰。",
+        "arrival": "你立于雷峰山下。"
+      },
+      "progress": 196,
+      "segments": [
+        { "text": "你携钵下断桥,沿湖南行。湖面起雾,雾里有人哭,有人未哭。" },
+        { "text": "雷峰山下,塔基已成。匠人候你多时,见钵入山,皆叩首。" },
+        { "text": "袖中钵已凉。她在里面,未动。" }
+      ],
+      "choices": [
+        { "text": "入塔基", "next": "act7_zhuji" }
+      ]
+    },
+    "act7_zhuji": {
+      "scene": {
+        "id": "leifeng_dixia",
+        "name": "雷峰塔 · 地宫 · 十二层",
+        "type": "major",
+        "description": "塔基地宫,以青砖砌十二层。中心一坑,可容一钵。",
+        "arrival": "你将钵置于坑心。"
+      },
+      "progress": 200,
+      "segments": [
+        { "text": "地宫十二层,以青砖砌就。中央一坑,大小恰可容一钵。" },
+        { "text": "你将金钵置于坑心。钵身古旧,铭文之上,新染了一缕月色。" },
+        { "text": "匠人封砖。第一层、第二层……至第十二层。" }
+      ],
+      "choices": [
+        { "text": "封塔", "next": "act7_seal" }
+      ]
+    },
+    "act7_seal": {
+      "scene": {
+        "id": "leifeng_construction",
+        "name": "雷峰山 · 七日七夜",
+        "type": "major",
+        "description": "七日七夜。诵经声不绝。塔从一层至七层。",
+        "arrival": "塔成。"
+      },
+      "progress": 206,
+      "segments": [
+        { "text": "七日七夜。你诵经不辍,匠人筑塔不歇。" },
+        { "text": "塔自地宫起,一层至七层,飞檐挑出,影压湖面。" },
+        { "text": "第七日黄昏,最后一片瓦合上。塔成。" }
+      ],
+      "choices": [
+        { "text": "登塔顶", "next": "act7_dengta" }
+      ]
+    },
+    "act7_dengta": {
+      "scene": {
+        "id": "leifeng_top",
+        "name": "雷峰塔 · 塔顶 · 黄昏",
+        "type": "major",
+        "description": "夕阳半沉。湖面如金。北望断桥,西望金山。",
+        "arrival": "你独立塔顶。"
+      },
+      "progress": 210,
+      "segments": [
+        { "text": "塔顶风急。北望,断桥在雾里;西北望,金山在水尽处。" },
+        { "text": "塔下湖水,与那一日的雨,一般无二。" },
+        { "text": "你忽觉袖中空——金钵已不在身上。它在塔下,从今而后,再不响。" }
+      ],
+      "choices": [
+        { "text": "看 ✦ 一千年后,这座塔倒了", "next": "act7_egg_archeology", "effect": "breath" },
+        { "text": "下塔", "next": "act7_choice5" }
+      ]
+    },
+    "act7_egg_archeology": {
+      "scene": "leifeng_top",
+      "progress": 213,
+      "segments": [
+        { "speaker": "旁白", "text": "你已发现一条藏品注解。" },
+        { "text": "完整说明已收录于藏馆。合上此页,走下塔去。" }
+      ],
+      "choices": [
+        {
+          "text": "下塔",
+          "next": "act7_choice5",
+          "changes": {
+            "set": { "eggs_collected": 7 },
+            "addFlag": "f_egg_archeology",
+            "unlockAchievement": "ach_culture_archeology"
+          }
+        }
+      ]
+    },
+    "act7_choice5": {
+      "chapterTitle": "第七幕 · 雷峰永镇",
+      "title": "心境",
+      "scene": {
+        "id": "leifeng_foot_dusk",
+        "name": "雷峰塔 · 塔下 · 黄昏",
+        "type": "major",
+        "description": "塔影压湖。你立于塔基外三丈。",
+        "arrival": "塔已成。今夜你将以何种心境离去?"
+      },
+      "progress": 216,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 心境拦轴 · 抉择⑤ ——" },
+        { "text": "事已毕。塔已成。她在塔下。" },
+        { "text": "今夜你将以何种心境,走出这片塔影?" }
+      ],
+      "choices": [
+        {
+          "text": "转身回金山寺,佛号一声",
+          "next": "act7_ending_jianding",
+          "changes": {
+            "set": { "final_mood": "jianding" },
+            "importantFlag": { "flag": "act7_jianding", "label": "坚定 · 天理在我" }
+          }
+        },
+        {
+          "text": "在塔下立到天亮",
+          "next": "act7_ending_huaiyi",
+          "changes": {
+            "set": { "final_mood": "huaiyi" },
+            "importantFlag": { "flag": "act7_huaiyi", "label": "怀疑 · 人间疑情" }
+          }
+        },
+        {
+          "text": "将禅杖留于塔下,独自下山",
+          "next": "act7_ending_juexing",
+          "changes": {
+            "set": { "final_mood": "juexing" },
+            "importantFlag": { "flag": "act7_juexing", "label": "觉醒 · 法眼破执" }
+          }
+        },
+        {
+          "text": "在塔旁结一座草庐",
+          "next": "act7_ending_cibei",
+          "changes": {
+            "set": { "final_mood": "cibei" },
+            "importantFlag": { "flag": "act7_cibei", "label": "慈悲 · 塔下二十年" }
+          }
+        }
+      ]
+    },
+    "act7_ending_jianding": {
+      "chapterTitle": "结局 · 天理在我",
+      "title": "坚定",
+      "scene": {
+        "id": "ending_jianding",
+        "name": "金山寺 · 禅房 · 子时",
+        "type": "major",
+        "description": "灯一盏。蒲团一只。〈雷峰塔传奇〉合于案头。",
+        "arrival": "你回到了开始的地方。"
+      },
+      "progress": 220,
+      "segments": [
+        { "text": "你转身,顺原路回金山寺。是夜子时,你于禅房之内,一灯一钵——只是钵已不在。" },
+        { "text": "你诵经如旧。心头空明,无一缕气息。" },
+        { "speaker": "法海", "text": "妖已伏。佛号一声。" },
+        { "speaker": "旁白", "text": "你完成了你必须完成的事。这一夜的月,与每一夜并无不同。" }
+      ],
+      "choices": [
+        {
+          "text": "——",
+          "next": "act7_credits",
+          "changes": {
+            "addFlag": "f_ending_jianding",
+            "unlockAchievement": "ach_ending_jianding"
+          }
+        }
+      ],
+      "isEnding": true
+    },
+    "act7_ending_huaiyi": {
+      "chapterTitle": "结局 · 人间疑情",
+      "title": "怀疑",
+      "scene": {
+        "id": "ending_huaiyi",
+        "name": "雷峰塔 · 塔下 · 五更",
+        "type": "major",
+        "description": "灯火长明。塔影未动。湖面起雾。",
+        "arrival": "你立到了天亮。"
+      },
+      "progress": 220,
+      "segments": [
+        { "text": "你未走。塔下一立,便是一夜。" },
+        { "text": "湖面起雾,塔影未动。你听见自己心里有一句话,头一回响起——" },
+        { "speaker": "法海", "text": "是不是,错了。" },
+        { "speaker": "旁白", "text": "塔下灯火长明。你完成了该做的事,可这一回,你不再确定那是该做的事。" }
+      ],
+      "choices": [
+        {
+          "text": "——",
+          "next": "act7_credits",
+          "changes": {
+            "addFlag": "f_ending_huaiyi",
+            "unlockAchievement": "ach_ending_huaiyi"
+          }
+        }
+      ],
+      "isEnding": true
+    },
+    "act7_ending_juexing": {
+      "chapterTitle": "结局 · 法眼破执",
+      "title": "觉醒",
+      "scene": {
+        "id": "ending_juexing",
+        "name": "雷峰山 · 山下小径 · 月落",
+        "type": "major",
+        "description": "禅杖斜倚塔基。一袭僧袍走入山雾。",
+        "arrival": "你独自下山。"
+      },
+      "progress": 220,
+      "segments": [
+        { "text": "你将禅杖斜倚于塔基之上。金钵已在塔下——你身上,从此一物不留。" },
+        { "text": "你不回金山寺。你沿山下小径而行,身后塔影渐远,前方山雾渐浓。" },
+        { "speaker": "法海", "text": "我之法眼,自此为执。今日破之。" },
+        { "speaker": "旁白", "text": "塔已成,人已去。一袭僧袍走入山雾,再无人见过那个叫法海的住持。" }
+      ],
+      "choices": [
+        {
+          "text": "——",
+          "next": "act7_credits",
+          "changes": {
+            "addFlag": "f_ending_juexing",
+            "unlockAchievement": "ach_ending_juexing"
+          }
+        }
+      ],
+      "isEnding": true
+    },
+    "act7_ending_cibei": {
+      "chapterTitle": "结局 · 塔下二十年",
+      "title": "慈悲",
+      "scene": {
+        "id": "ending_cibei",
+        "name": "雷峰塔 · 塔旁草庐 · 二十年后",
+        "type": "major",
+        "description": "草庐一间。案上一卷〈雷峰塔传奇〉,翻在最末一出。",
+        "arrival": "二十年。"
+      },
+      "progress": 220,
+      "segments": [
+        { "text": "你于塔旁结草庐一座。山下匠人不解,只见这位老僧每日扫塔、抄经、煮茶,从不入城。" },
+        { "text": "二十年。许仙老去,孩子长大成人,曾来塔下看过他母亲一回——你为他点过一盏灯。" },
+        { "text": "案上一卷〈雷峰塔传奇〉,被你翻得书脊已散。每日翻到最末一出。" },
+        { "speaker": "法海", "text": "我等的不是她出来。我等的是这一卷,有人写到第二个结局。" },
+        { "speaker": "旁白", "text": "塔下二十年。你不曾说半句忏悔——只是日复一日,翻到最末那一出。" }
+      ],
+      "choices": [
+        {
+          "text": "——",
+          "next": "act7_credits",
+          "changes": {
+            "addFlag": "f_ending_cibei",
+            "unlockAchievement": "ach_ending_cibei"
+          }
+        }
+      ],
+      "isEnding": true
+    },
+    "act7_ending_jita": {
+      "chapterTitle": "隐回 · 祭塔",
+      "title": "二十年后 · 清明",
+      "scene": {
+        "id": "ending_jita",
+        "name": "雷峰塔下 · 清明 · 二十年后",
+        "type": "major",
+        "description": "塔影未改。塔基青苔满阶。山下来一位骑马的青年状元。",
+        "arrival": "二十年。"
+      },
+      "progress": 230,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 隐回 · 祭塔 ——" },
+        { "text": "二十年。许仙已老去三年。他的儿子,名仕林,今春金榜题名,中状元,授翰林。" },
+        { "text": "清明。仕林辞官三日,只身骑马至雷峰山下,下马便跪。三跪九叩,念一卷〈祭母文〉——他从未见过母亲一面,只听父亲讲了二十年。" },
+        { "text": "江上忽起一道青烟,落于塔基。青衣,二十年前那一袭青衣,鬓边白了一线,手中长剑未老。" },
+        { "speaker": "青蛇", "text": "姐姐。我等了二十年。今日,我接你出塔。" },
+        { "text": "剑指塔基,第一道裂痕生。塔从七层而一层,一层一层崩落——最末一片瓦掉下时,恰是黄昏,与塔成那一日,一般无二。" },
+        { "text": "白衣自废墟中走出。病色已退,鬓发未白。她看见跪着的人,二十年来第一次,唤一声「儿」。" },
+        { "speaker": "旁白", "text": "故事原典中,白蛇被镇于塔下,这是一种结局。故事之外,人们等了三百年,把这一卷,写到了第二个结局——孝心动塔,母子重逢。" },
+        { "speaker": "旁白", "text": "忘情茶馆 · 隐回 · 终。" }
+      ],
+      "choices": [
+        {
+          "text": "——",
+          "next": "act7_credits",
+          "changes": {
+            "addFlag": "f_ending_jita",
+            "unlockAchievement": "ach_ending_jita"
+          }
+        }
+      ],
+      "isEnding": true
+    },
+    "act7_credits": {
+      "chapterTitle": "《白蛇 · 法海篇》 · 终",
+      "title": "卷尾",
+      "sceneImage": "stage-empty",
+      "scene": {
+        "id": "credits_scroll",
+        "name": "卷尾 · 落款",
+        "type": "major",
+        "description": "长卷收束。墨迹将干。",
+        "arrival": "你看完了这一回。"
+      },
+      "progress": 225,
+      "segments": [
+        { "speaker": "旁白", "text": "—— 〈白蛇 · 法海篇〉 · 终 ——" },
+        { "text": "底本:清 · 方成培〈雷峰塔传奇〉 / 明 · 冯梦龙〈警世通言 · 白娘子永镇雷峰塔〉。" },
+        { "text": "故事中,白蛇被镇于雷峰塔下,这是原典。" },
+        { "text": "故事外,雷峰塔于一九二四年倒塌,塔下未见钵,只见一卷藏经。" },
+        { "text": "你以法海之眼走完这一回。下一回,可换一双眼——许仙的、白蛇的、青蛇的、金钵的。" },
+        { "speaker": "旁白", "text": "忘情茶馆 · 第一回 · 终。" }
+      ],
+      "choices": [
+        { "text": "翻到这一卷的最末页 ✦", "next": "act7_ending_jita", "effect": "breath" },
+        {
+          "text": "再走一回",
+          "next": "start",
+          "changes": {
+            "addFlag": "f_completed"
+          }
+        }
+      ],
+      "isEnding": true
+    }
+  }
+}

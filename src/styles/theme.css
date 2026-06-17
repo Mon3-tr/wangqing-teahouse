@@ -1,0 +1,327 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ===== 品牌色 ===== */
+  --color-primary: #6B8775;  /* 茶青 · 主色 */
+  --color-primary-light: #869B8A;  /* 悬停 */
+  --color-primary-dark: #566F60;  /* 强调 */
+
+  /* ===== 强调辅助色（克制使用，全篇 < 8%） ===== */
+  --color-accent-cinnabar: #B85450;  /* 朱砂 · 卷中拦轴/收藏 */
+  --color-accent-gold: #B89968;  /* 薄金 · 已收集金边 */
+
+  /* ===== 空间色（卷轴底色） ===== */
+  --color-bg: #F5EFE3;  /* 米宣 · 仿宣纸 */
+  --color-surface: #FAF6EC;  /* 纸白 */
+  --color-overlay: rgba(245, 239, 227, 0.85);  /* 薄雾 */
+  --color-border: #D9D0BE;  /* 淡墨 */
+  --color-border-strong: #B8AC93;  /* 浓墨边 · 古画装裱外框 */
+
+  /* ===== 文字色 ===== */
+  --color-text: #2C2A26;  /* 古墨 */
+  --color-text-muted: #6E665A;  /* 远墨 · 旁白 */
+  --color-text-faint: #8C8474;  /* 淡墨 · 心声 */
+  --color-text-inverse: #FAF6EC;  /* 反白文字（深色块上） */
+
+  /* ===== 状态色（克制） ===== */
+  --color-success: #6B8E5A;  /* 苔绿 */
+  --color-warning: #C99853;  /* 杏黄 */
+  --color-error: #B85450;  /* 朱砂（与 accent-cinnabar 同） */
+  --color-info: #6B8775;  /* 黛青（与主色同） */
+
+  /* ===== 字体 ===== */
+  --font-serif: 'Source Han Serif SC', 'Noto Serif CJK SC', 'Songti SC', serif;
+  --font-en-serif: 'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', 'Menlo', monospace;
+
+  /* ===== 字号阶梯（基于 17px 正文，长卷阅读放大） ===== */
+  --text-display: 40px;  /* 展示标题 · 首页 Hero「忘情茶馆」/章节封面 */
+  --text-title: 28px;  /* 页面标题 · 章节名、幕名 */
+  --text-heading: 22px;  /* 模块标题 · 卡片标题、彩蛋浮窗标题 */
+  --text-body: 17px;  /* 正文 · 卷轴文字段（主要阅读体） */
+  --text-narration: 18px;  /* 旁白 · 比正文略大、字色偏远墨 */
+  --text-inner: 16px;  /* 心声 · 比正文略小、italic、字色偏淡 */
+  --text-small: 14px;  /* 辅助文字 · 描述、说明 */
+  --text-caption: 12px;  /* 标签/说明 · 进度%、章节标号 */
+
+  /* ===== 字重 ===== */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* ===== 行高 ===== */
+  --leading-tight: 1.3;  /* 标题 */
+  --leading-body: 1.85;  /* 正文 · 长卷阅读专用 */
+  --leading-narration: 2.0;  /* 旁白 · 强化叙事者声音的"留白感" */
+  --leading-small: 1.6;  /* 辅助文字 */
+
+  /* ===== 字间距 ===== */
+  --tracking-tight: 0.02em;  /* 标题 */
+  --tracking-body: 0.04em;  /* 正文（让宋体更"透气"） */
+
+  /* ===== 间距系统（4px 基础单位，长卷阅读适当放大） ===== */
+  --space-xs: 4px;  /* 图标与文字之间、紧凑标签内边距 */
+  --space-sm: 8px;  /* 按钮内文字与图标间距 */
+  --space-md: 16px;  /* 段落内元素间距 */
+  --space-lg: 24px;  /* 段与段之间间距 */
+  --space-xl: 40px;  /* 古画与文字段之间间距（呼吸） */
+  --space-2xl: 64px;  /* 幕与幕之间间距（卷轴上的"留白"） */
+  --space-3xl: 120px;  /* 章与章之间间距（薄间隔区） */
+
+  /* ===== 圆角系统（小圆角 · 古雅克制） ===== */
+  --radius-sm: 2px;  /* 进度条、小标签 */
+  --radius-md: 6px;  /* 按钮、输入框、抉择卡片 */
+  --radius-lg: 12px;  /* 古画外框（仿装裱）、彩蛋浮窗 */
+  --radius-xl: 16px;  /* 大型弹窗（如分享卡片） */
+  --radius-full: 9999px;  /* 头像、Chip、收藏标记、悬浮控件按钮 */
+
+  /* ===== 容器宽度 ===== */
+  --container-reading: 680px;  /* 卷轴文字段最大宽度 */
+  --container-painting: 880px;  /* 古画在卷轴中的最大显示宽度 */
+  --container-page: 1200px;  /* 首页等非阅读页最大宽度 */
+
+  /* ===== 动效 ===== */
+  --duration-fast: 200ms;  /* 按钮状态、悬停 */
+  --duration-normal: 400ms;  /* 文字逐句淡入、彩蛋浮窗 */
+  --duration-slow: 800ms;  /* 古画进入、Ken Burns、卷轴展开 */
+  --duration-epic: 1600ms;  /* 章节封面切换、幻象浮现/消散 */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);  /* 大多数交互 */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);  /* 状态切换 */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);  /* 浮窗/弹出 */
+  --ease-scroll: cubic-bezier(0.25, 0.1, 0.25, 1);  /* 卷轴专用 */
+
+  /* ===== 忘情茶馆视觉小说 UI 色彩覆盖 ===== */
+  --color-primary: #CA8D37;
+  --color-primary-light: #F1C66E;
+  --color-primary-dark: #8A3A10;
+  --color-accent-cinnabar: #8A3A10;
+  --color-accent-gold: #CA8D37;
+  --color-bg: #1E1204;
+  --color-surface: #DDA953;
+  --color-surface-light: #F1C66E;
+  --color-overlay: rgba(30, 18, 4, 0.88);
+  --color-border: #704B18;
+  --color-border-strong: #B98336;
+  --color-text: #2A1806;
+  --color-text-muted: #704B18;
+  --color-text-faint: #B48D4B;
+  --color-text-inverse: #F1C66E;
+  --color-success: #B48D4B;
+  --color-warning: #CA8D37;
+  --color-error: #8A3A10;
+  --color-info: #B98336;
+  --ui-background-dark: #1E1204;
+  --ui-wood-dark: #51300A;
+  --ui-wood-mid: #704B18;
+  --ui-parchment-base: #DDA953;
+  --ui-parchment-light: #F1C66E;
+  --ui-card-paper: #F4DCA8;
+  --ui-card-paper-light: #FFF0C9;
+  --ui-card-paper-deep: #E8BD78;
+  --ui-gold-main: #CA8D37;
+  --ui-gold-border: #B98336;
+  --ui-gold-muted: #B48D4B;
+  --ui-ink-text: #2A1806;
+  --ui-warm-shadow: #9D6824;
+  --ui-accent-red-brown: #8A3A10;
+  --ui-top-nav-bg: rgba(30,18,4,0.88);
+  --ui-dialogue-bg: rgba(221,169,83,0.78);
+  --ui-scene-glow: radial-gradient(circle at center, #F1C66E 0%, #DDA953 45%, #9D6824 100%);
+  --ui-dark-vignette: linear-gradient(to bottom, rgba(30,18,4,0.75), rgba(30,18,4,0.15), rgba(30,18,4,0.9));
+
+  /* Legacy compatibility */
+  --font-size: 17px;
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-surface);
+  --border: var(--color-border);
+  --radius: var(--radius-md);
+  --font-weight-medium: var(--weight-medium);
+  --font-weight-normal: var(--weight-regular);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply outline-ring/50;
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-serif);
+    font-size: var(--font-size);
+    line-height: var(--leading-body);
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: var(--text-display);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.3;
+    color: var(--color-text);
+  }
+
+  h2 {
+    font-size: var(--text-title);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.4;
+    color: var(--color-text);
+  }
+
+  h3 {
+    font-size: var(--text-heading);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+
+  h4 {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+
+  p {
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+  }
+
+  label {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-body);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* 移动端优化 */
+  @media (max-width: 768px) {
+    :root {
+      --font-size: 16px;
+      --text-display: 32px;
+      --text-title: 24px;
+      --text-heading: 20px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 80px;
+    }
+
+    body {
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x pan-y;
+    }
+  }
+
+  /* 启用横向滚动优化 */
+  @media (max-width: 768px) {
+    body {
+      overflow: hidden;
+    }
+  }
+
+  /* 隐藏滚动条 */
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
