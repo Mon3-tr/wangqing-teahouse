@@ -33,4 +33,4 @@ npm run preview  # 预览构建结果
 - 快速上手：[QUICK_START.md](./QUICK_START.md)
 - 当前项目地图：[CURRENT_PROJECT_MAP.md](./CURRENT_PROJECT_MAP.md)
 
-- 喵喵喵喵喵喵喵感谢伟大的小组成员鬼火老师和荀图老师
+- 喵喵喵喵喵喵喵感谢伟大的小组成员鬼火老师和荀荼老师
